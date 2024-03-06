@@ -8,15 +8,13 @@ import lombok.Data;
 public class Blusa {
     private String tamaño;
     private double precioCompra;
-    private double precioVenta;
     private int inventario;
     private String codigoVenta;
 
-    public Blusa(String tamaño, double precioCompra, double precioVenta) {
+    public Blusa(String tamaño, double precioCompra) {
         this.tamaño = tamaño;
         this.precioCompra = precioCompra;
-        this.precioVenta = precioVenta;
-        this.inventario = 5;
+        this.inventario = 15;
         this.codigoVenta = generarCodigoVenta();
     }
 
@@ -28,6 +26,6 @@ public class Blusa {
 
     @Override
     public String toString() {
-        return String.format("%s %s %d %.2f %.2f", "Blusa", tamaño, inventario, precioCompra, precioVenta);
+        return String.format("%s %s %d %.2f %.2f", "Blusa", tamaño, inventario, precioCompra);
     }
 }

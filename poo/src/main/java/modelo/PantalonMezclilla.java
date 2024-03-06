@@ -10,15 +10,13 @@ public class PantalonMezclilla {
     private String tamaño;
     private String codigoVenta;
     private double precioCompra;
-    private double precioVenta;
     private int inventario;
 
-    public PantalonMezclilla(String sexo, String tamaño, double precioCompra, double precioVenta) {
+    public PantalonMezclilla(String sexo, String tamaño, double precioCompra) {
         this.sexo = sexo;
         this.tamaño = tamaño;
         this.precioCompra = precioCompra;
-        this.precioVenta = precioVenta;
-        this.inventario = 5;
+        this.inventario = 15;
         this.codigoVenta = generarCodigoVenta();
     }
 
@@ -30,6 +28,6 @@ public class PantalonMezclilla {
 
     @Override
     public String toString() {
-        return String.format("%s %s %d %.2f %.2f", "PantalonMezclilla", tamaño, inventario, precioCompra, precioVenta);
+        return String.format("%s %s %d %.2f %.2f", "PantalonMezclilla", tamaño, inventario, precioCompra);
     }
 }
